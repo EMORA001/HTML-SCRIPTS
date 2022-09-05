@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+   		<meta charset="UTF-8">
+   	<title>Actividad </title>
+	</head>
+	<body>
+        <h4>5.- Escriba una declaración condicional de JavaScript para ordenar tres números
+            de mayor a menor. Muestre un cuadro de alerta para mostrar el resultado.
+            Números ejemplo : 0, -1, 4
+            Salida: 4, 0, -1</h4>
+		<form>
+            <div>               
+                <input type="text" name="Numero1" id="Numero1"style="width: 30px">
+                <input type="text" name="Numero2" id="Numero2"style="width: 30px">
+                <input type="text" name="Numero3" id="Numero3"style="width: 30px"><br><br>
+            </div>
+            <button onclick="Calcular()">Calcular</button>
+		</form>
+         
+		<script>
+            var num1 =null;
+            var num2 = null;
+            var num3 = null;
+            function Calcular(){  
+                num1 = document.getElementById("Numero1").value;                  
+                num2 = document.getElementById("Numero2").value;                               
+                num3 = document.getElementById("Numero3").value;                                                      
+                const numeros = [num1, num2, num3];
+                numeros.sort(function(a, b){return b - a});
+                alert("Numero Ingresados de Mayor a Menor: "+numeros);
+            };
+            function functionArray() {
+                var estado;
+                valor= document.getElementById("valor").value;   
+                myArr = [2,5,9,6,1];                    
+                alert("Arreglo:   ["+myArr+"]");
+                estado=console.log(contains(myArr, valor));
+                                 
+            };
+            function contains(arr,valor) { 
+                for (var i = 0; i <=myArr.length; i++) {
+                    if(arr[i]==valor){
+                        alert("True");
+                        break;}
+                    if(i==myArr.length){
+                        alert("False");
+                    }                    
+                }                   
+            };
+
+		</script>
+
+        <h4>6.- Escriba una función de JavaScript para conocer si en un array existe un
+            elemento específico.</h4>
+
+        <form>
+            <div>    
+                <label for="Name">Ingrese numero a Buscar:  </label>           
+                <input type="text" name="valor" id="valor"style="width: 50px">           
+            </div><br> 
+            <button onclick="functionArray()">Buscar</button>
+        </form>
+
+
+
+	</body>
+</html>
+
+
+
